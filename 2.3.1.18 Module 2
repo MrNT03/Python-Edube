@@ -1,0 +1,24 @@
+def mysplit(strng):
+    b = ""
+    lst=[]
+    i = 1
+    for a in strng:
+        if a == " ":
+            lst.append(b)
+            b = ""
+        else:
+            b += a
+    while i < len(lst):
+        if lst[i] == lst[i-1] == "":
+            del lst[i]
+        i += 1
+    
+    return lst
+
+print(mysplit("To be or not to be, this is a question"))
+print(mysplit("To be or not to be,this is a question"))
+print(mysplit("   "))
+print(mysplit(" abc "))
+print(mysplit(""))
+
+# IT STILL OMITS THE LAST WORD AND DOESN'T DELETE ALL THE WHITESPACES INTO ONE
