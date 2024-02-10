@@ -1,0 +1,24 @@
+a = input("Enter the first word: ")
+b = input("Enter the second word: ")
+
+strng_1 = a.lower()
+strng_1 = strng_1.replace(" ", "")
+strng_1 = list(strng_1)
+strng_2 = b.lower()
+strng_2 = strng_2.replace(" ", "")
+strng_2 = list(strng_2)
+
+n = False
+if len(strng_1) == len(strng_2):
+    for i in strng_1:
+        for j in strng_2:
+            n = False
+            if i == j:
+                strng_2.remove(j)
+                n = True
+        
+
+if n == True:
+    print("Anagram")
+if n == False:
+    print("Not Anagram")
