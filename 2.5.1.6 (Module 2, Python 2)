@@ -1,0 +1,15 @@
+strng = input("Enter the string to be encrypted: ")
+shift = int(input("Give a number between 1 - 25 as a shift for encryption: "))
+encrypted= ""
+
+for chara in strng:
+    if chara.isalpha() == False:
+        encrypted += chara
+    if chara.islower() == True:
+        a = ((((ord(chara) + shift) - 97)% 26) + 97)
+        encrypted += chr(a)
+    if chara.isupper() == True:
+        a = ((((ord(chara) + shift)- 65) % 26) + 65)
+        encrypted += chr(a)
+        
+print(encrypted)
