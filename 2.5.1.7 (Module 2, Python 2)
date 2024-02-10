@@ -1,0 +1,15 @@
+strng = input("Enter a text to be checked whether it is a pplaindrome or not: ")
+new_strng = strng.replace(" ","")
+j = (len(new_strng) - 1)
+
+for i in range((len(new_strng) // 2)):
+    if new_strng[i] != new_strng[j]:
+        n = False
+        j -= 1
+    else:
+        n = True
+
+if n == True:
+    print("It's a palindrome")
+if n == False:
+    print("it isn't a palindrome")
