@@ -1,0 +1,13 @@
+strng = input("Enter birthday: ")
+strng = list(strng)
+sum = 0
+for i in strng:
+    sum += int(i)
+sum = list(str(sum))
+if len(sum) > 1:
+    sum1 = 0
+    for i in sum:
+        sum1 += int(i)
+    print(sum1)
+else:
+    print(sum[0])
