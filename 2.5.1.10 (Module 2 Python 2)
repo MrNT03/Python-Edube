@@ -1,0 +1,15 @@
+strng1 = (input("First string: ")).lower()
+strng2 = (input("Second string: ")).lower()
+strng3 = list(strng1)
+j = 0
+for i in strng3:
+    n = False
+    j = strng2.find(i, j)
+    if j != -1:
+        n = True
+    else: continue
+
+if n == True:
+    print("Yes")
+if n == False:
+    print("No")
