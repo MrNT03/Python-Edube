@@ -1,0 +1,214 @@
+# Can be edited and some cooments removed and some comments added as well
+# Some of the loops can be put into a function as well
+
+big_lst = []
+checker_lst = []
+k = 0
+
+for i in range(9):
+    print("Enter row number", (i+1))
+    a = int(input(": "))
+    a = list(str((a)))
+    big_lst.append(a)
+copy_lst = big_lst[:]
+# print(big_lst)
+
+
+for k in range(9):
+    for i in range(1,10):
+        big_lst = copy_lst[:]
+        for j in range(9):
+            if int(big_lst[j][k]) == i:
+                checker_lst.append(big_lst[j][k])
+                del big_lst[j]
+                # print(checker_lst)
+                # print(big_lst)
+                if len(checker_lst) == 9:
+                    del checker_lst[:]
+                    n = True
+                else:
+                    n = False
+                break
+
+
+if n == True:               
+    for k in range(9):
+        for i in range(1,10):
+            big_lst = copy_lst[:]
+            for j in range(9):
+                if int(big_lst[k][j]) == i:
+                    checker_lst.append(big_lst[k][j])
+                    # del big_lst[j]
+                    # print(checker_lst)
+                    # print(big_lst)
+                    if len(checker_lst) == 9:
+                        del checker_lst[:]
+                        n = True
+                    else:
+                        n = False
+                    break
+
+
+if n == True:   
+    checker_3x3 = ['1','2','3','4','5','6','7','8','9']
+    list_3x3 = []
+    checker_copy = checker_3x3[:]
+
+
+    for a in range(0,3):
+        for b in range(0,3):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else: 
+            checker_3x3 = checker_copy[:]
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True: 
+    for a in range(0,3):
+        for b in range(3,6):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True: 
+    for a in range(0,3):
+        for b in range(6,9):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True: 
+    for a in range(3,6):
+        for b in range(0,3):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True:        
+    for a in range(3,6):
+        for b in range(3,6):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True: 
+    for a in range(3,6):
+        for b in range(6,9):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True: 
+    for a in range(6,9):
+        for b in range(0,3):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+
+if n == True: 
+    for a in range(6,9):
+        for b in range(3,6):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True: 
+    for a in range(6,9):
+        for b in range(6,9):
+            list_3x3.append(big_lst[a][b])
+    list_3x3 = sorted(list_3x3)
+    # print(list_3x3)
+    # print(checker_3x3)
+    for i in range(9):
+        if list_3x3[i] == checker_3x3[i]:
+            checker_3x3 = checker_copy[:]
+            n = True
+        else:
+            checker_3x3 = checker_copy[:] 
+            n = False
+            break
+    del list_3x3[:]
+
+if n == True:
+    print("Valid")
+if n == False:
+    print("Not Valid")
