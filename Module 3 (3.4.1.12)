@@ -1,0 +1,43 @@
+def two_digits(s):
+    s = str(s)
+    if len(s) == 1:
+        s = "0" + s
+    return s
+
+class Timer:
+    def __init__(self, hrs=0, min=0,sec=0):
+        self.__hrs = hrs
+        self.__min = min
+        self.__sec = sec
+        
+    def __str__(self):
+        return two_digits(self.__hrs) + ":" + two_digits(self.__min) + ":" + two_digits(self.__sec)
+
+    def next_second(self):
+        self.__sec += 1
+        if self.__sec > 59:
+            self.__sec = 0
+            self.__min +=1
+            if self.__min > 59:
+                self.__min = 0
+                self.__hrs += 1
+                if self.__hrs > 23:
+                    self.__hrs = 0
+    def prev_second(self):
+        self.__sec -= 1
+        if self.__sec < 0:
+            self.__sec = 59
+            self.__min -= 1
+            if self.__min < 0:
+                self.__min = 59
+                self.__hrs -= 1
+                if self.__hrs < 0:
+                    self.__hrs = 23
+
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
