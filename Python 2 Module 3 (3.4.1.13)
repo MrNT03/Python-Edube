@@ -1,0 +1,35 @@
+class WeekDayError(Exception):
+    pass
+	
+
+class Weeker:
+    __day_names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+    def __init__(self, day):
+        try:
+            self.index_number = self.__day_names.index(day)
+        except:
+            raise WeekDayError
+            
+            
+
+    def __str__(self):
+        return self.__day_names[self.index_number]
+    def add_days(self, n):
+        self.index_number = ((n + self.index_number) % 7)
+
+    def subtract_days(self, n):
+        self.index_number = (self.index_number - n) % 7
+
+
+
+try:
+    weekday = Weeker('Mon')
+    print(weekday)
+    weekday.add_days(15)
+    print(weekday)
+    weekday.subtract_days(23)
+    print(weekday)
+    weekday = Weeker('Monday')
+except WeekDayError:
+    print("Sorry, I can't serve your request.")
